@@ -1,0 +1,16 @@
+Maverick Class Library (MAVCL) v1.30
+
+Maverick Class Library is a set of C++ classes for business and
+General purpose application built upon Visualage for C++ Open Class.
+SOURCE code and DLL is supplied.
+A VBE and a VBB file are included, for formatted entry fields support from
+VISUAL BUILDER.
+MAVCL has classes for:
+- Date, string, numbers formatted entry fields
+- Date and numbers conversions to/from formatted strings
+- Presentation Manager PRINTER support
+- Regular expression support
+- directory services
+
+This product is distributed under the FREEWARE concept.
+

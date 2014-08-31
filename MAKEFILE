@@ -1,0 +1,51 @@
+# Makefile for
+# mavcl.dll
+DLLNAME= mavcl
+
+all: $(DLLNAME)
+$(DLLNAME): $(DLLNAME).dll
+
+GCPPC=icc
+GLINK=link386
+
+#dynamic libs
+LIBS=cppooc3i.lib cppom30i.lib
+
+#production
+GCPPFLAGS=-c -W3 -Ge- -Gm+ -O+ -Q
+GLCCFLAGS=-B"/PM:PM /NOI /EXEPACK /NOD" -Q  -Ge- -Fe$(DLLNAME)
+
+#debug
+#GCPPFLAGS=-c -W3 -Gm+ -Ge- -O- -Ti -Q
+#GLCCFLAGS=-B"/PM:PM /DEBUG /NOI /NOD" -Q  -Ge- -Fe$(DLLNAME)
+
+$(DLLNAME).dll: mavcl.res mavfrent.obj mavdrsr.obj mavconv.obj mavregex.obj mavprint.obj mpsetup.obj
+	$(GCPPC) $(GLCCFLAGS) mavfrent.obj mavdrsr.obj mavprint.obj mpsetup.obj \
+	mavconv.obj mavregex.obj \
+	os2386.lib $(LIBS) $(DLLNAME).def
+	rc $(DLLNAME).res $(DLLNAME).dll
+        implib $(DLLNAME).lib $(DLLNAME).dll
+
+mavfrent.obj: mavfrent.cpp mavfrent.hpp
+	$(GCPPC) $(GCPPFLAGS) mavfrent.cpp
+
+mavdrsr.obj: mavdrsr.cpp mavdrsr.hpp
+	$(GCPPC) $(GCPPFLAGS) mavdrsr.cpp
+
+mavregex.obj: mavregex.cpp mavregex.hpp
+	$(GCPPC) $(GCPPFLAGS) mavregex.cpp
+
+mavconv.obj: mavconv.cpp mavconv.hpp
+	$(GCPPC) $(GCPPFLAGS) mavconv.cpp
+
+mavprint.obj: mavprint.cpp mavprint.hpp
+	$(GCPPC) $(GCPPFLAGS) mavprint.cpp
+
+mpsetup.obj: mpsetup.cpp mavprint.hpp
+	$(GCPPC) $(GCPPFLAGS) mpsetup.cpp
+
+$(DLLNAME).res: $(DLLNAME).rc
+	rc -r $(DLLNAME).rc
+	rc $(DLLNAME).res $(DLLNAME).dll
+
+

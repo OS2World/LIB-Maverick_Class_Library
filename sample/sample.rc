@@ -1,0 +1,22 @@
+#define INCL_WIN
+#include <os2.h>
+
+#define WND_MAIN         5000           //Main Window Id
+#define MI_CLOSE         5001           //Command Id
+#define IDM_PRINT         5002           //Command Id
+#define IDM_PRINTERSETUP         5003           //Command Id
+
+STRINGTABLE
+  BEGIN
+    WND_MAIN,   "Simple Application"    //Title bar text (main ID)
+  END
+
+MENU WND_MAIN                           //Main Window Menu (WND_MAIN)
+  BEGIN
+    MENUITEM "~Close",   MI_CLOSE
+    MENUITEM "~Print",                         IDM_PRINT,        MIS_TEXT
+    MENUITEM "P~rinter setup...",                  IDM_PRINTERSETUP, MIS_TEXT
+  END
+
+
+

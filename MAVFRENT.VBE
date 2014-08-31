@@ -1,0 +1,61 @@
+//
+//VBBeginPartInfo: AlphaEntryField, "Maverick Alphanumeric Formatted Entry Field"
+//VBParent: IEntryField
+//VBIncludes: <mavfrent.hpp>
+//VBPartDataFile: 'mavfrent.vbb'
+//VBComposerInfo: visual, 322, dde4vr30, userprimitive
+//VBComposerTextSetting: text, UsePartName
+//VBAttribute: capsLock, "force all caps", Boolean, Boolean isCapsLock() const, void capsLock(Boolean capsLock)
+//VBAttribute: noNumberAllowed, "forbid number entry", Boolean, Boolean isNoNumberAllowed() const, void noNumberAllowed(Boolean noNumberAllowed)
+//VBAttribute: allowedChars, "allow only entry of chars in this string", IString, IString& allowedChars() const, void setAllowedChars(IString& allowedChars)
+//VBAttribute: regex, "check for this regex on lostfocus", IString, IString& regex() const, void setRegex(IString& regex)
+//VBEndPartInfo: AlphaEntryField
+//
+//
+//VBBeginPartInfo: NumEntryField, "Maverick Numeric Formatted Entry Field"
+//VBParent: IEntryField
+//VBIncludes: <mavfrent.hpp>
+//VBPartDataFile: 'mavfrent.vbb'
+//VBComposerInfo: visual, 322, dde4vr30, userprimitive
+//VBComposerTextSetting: text, UsePartName
+//VBAttribute: double, "double field content", double, double getDouble(), NumEntryField & setDouble(double value),textId, NOSETTING
+//VBAttribute: thousDisplayed, "is thousand separator shown", Boolean, Boolean isThousDisplayed() const, void thousDisplayed(Boolean thousDisplayed)
+//VBAttribute: showZero, "is a single zero shown", Boolean, Boolean isShowZero() const, void showZero(Boolean showZero)
+//VBAttribute: min, "minimum allowed number", double, double minAllowed() const, void setMinAllowed(double minAllowed)
+//VBAttribute: max, "maximum allowed number", double, double maxAllowed() const, void setMaxAllowed(double maxAllowed)
+//VBAction: getDouble, "returns the value", double, double getDouble()
+//VBAction: setDouble, "sets the value", NumEntryField &, NumEntryField & setDouble(double value)
+//VBPreferredFeatures: double, setDouble, getDouble, text
+//VBEndPartInfo: NumEntryField
+//
+//
+//VBBeginPartInfo: DateEntryField, "Maverick Date Formatted Entry Field"
+//VBParent: IEntryField
+//VBIncludes: <mavfrent.hpp>
+//VBPartDataFile: 'mavfrent.vbb'
+//VBComposerInfo: visual, 322, dde4vr30, userprimitive
+//VBComposerTextSetting: text, UsePartName
+//VBAttribute: textWithDefault, "Date field content as string with 1 jan 1800 as default", IString, IString getTextWithDefault(), DateEntryField & setTextWithDefault(IString s), textId, NOSETTING
+//VBAttribute: date, "date field content", IDate, IDate getDate(), DateEntryField & setDate(IDate date),  textId, NOSETTING
+//VBAttribute: noYearDisplayed, "is year displayed", Boolean, Boolean isNoYearDisplayed() const, void noYearDisplayed(Boolean noYearDisplayed)
+//VBAction: getDate, "returns the value", IDate, IDate getDate()
+//VBAction: setDate, "sets the value", DateEntryField &, DateEntryField & setDate(IDate date)
+//VBPreferredFeatures: date, setDate, getDate, textWithDefault
+//VBEndPartInfo: DateEntryField
+//
+//
+//VBBeginPartInfo: TimeEntryField, "Maverick Time Formatted Entry Field"
+//VBParent: IEntryField
+//VBIncludes: <mavfrent.hpp>
+//VBPartDataFile: 'mavfrent.vbb'
+//VBComposerInfo: visual, 322, dde4vr30, userprimitive
+//VBComposerTextSetting: text, UsePartName
+//VBAttribute: textWithDefault, "Time field content as string with 00:00:00 as default", IString, IString getTextWithDefault(), TimeEntryField & setText(IString s), textId, NOSETTING
+//VBAttribute: time, "timee field content", ITime, ITime getTime(), TimeEntryField & setTime(ITime time),  textId, NOSETTING
+//VBAction: getTime, "returns the value", ITime, ITime getTime()
+//VBAction: setTime, "sets the value", TimeEntryField &, TimeEntryField & setTime(ITime time)
+//VBPreferredFeatures: time, setTime, getTime, textWithDefault
+//VBEndPartInfo: TimeEntryField
+//
+
+
